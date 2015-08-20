@@ -64,8 +64,8 @@ The sample code is commented and show usage exemples of the SDK.
     ```
     #import <Facelytics/Facelytics.h>
     ```
-The main sdk entry point is the FLYCaptureManager object. You can either use it via the singleton `sharedInstance` if you want continuous run of the sdk across the application (especially if you have subscribe to the unlimited plan), or by creating a regular instance by yourself to allow correct release at the end of the session. You will need a new license request at each FLYCaptureManager creation if you don't use the sharedInstance.
- 
+The main sdk entry point is the FLYCaptureManager object.You have to keep a strong reference on the object while the session is running. You will need a new license request at each FLYCaptureManager creation. It's recomanded to create a new FLYCaptureManager for each session.
+
 2. Optional : If the entire interface is based on Facelytics, you can check if the device can run Facelytics prior to show any Facelytics related UI :
 
   ```objc
