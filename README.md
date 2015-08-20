@@ -26,8 +26,9 @@ pod "Facelytics"
 
 1. Download the [latest code version](https://github.com/wassafr/Facelytics-ios/archive/master.zip) or add the repository as a git submodule to your git-tracked project.
 2. Drag and drop the **Pod** directory from the archive in your project navigator. Make sure to select *Copy items* when asked if you extracted the code archive outside of your project.
-3. Download the [opencv library](http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.10/opencv2.framework.zip/download) and drag and drop the opencv2.framework in your project navigator.
-4. Add the opencv dependancies in your project properties in *Build Phases* > *Link with libraries* :
+3. Under `Pod/lib` there is 2 versions of the library, you need to add to your target only the one you need (wether you ar debugging or making a release)
+4. Download the [opencv library](http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.11/opencv2.framework.zip/download) and drag and drop the opencv2.framework in your project navigator.
+5. Add the opencv dependancies in your project properties in *Build Phases* > *Link with libraries* :
     * libstdc++
     * Accelerate
     * AssetsLibrary
@@ -38,8 +39,10 @@ pod "Facelytics"
     * CoreVideo
     * Foundation
     * QuartzCore
+    * ImageIO
+    * MobileCoreServices
     * UIKit
-5. Include Facelytics wherever you need it with `#import <Facelytics/Facelytics.h>` from Objective-C or `import Facelytics` from Swift.
+6. Include Facelytics wherever you need it with `#import "Facelytics.h"` from Objective-C or `import Facelytics` from Swift.
 
 
 
