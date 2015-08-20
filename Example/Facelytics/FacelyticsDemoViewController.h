@@ -2,12 +2,20 @@
 //  FacelyticsDemoViewController.h
 //  Facelytics
 //
-//  Created by Peter Schaeffer on 08/17/2015.
+//  Created by Peter Schaeffer on 20/08/2015.
 //  Copyright (c) 2015 Peter Schaeffer. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+#import <Facelytics/Facelytics.h>
+@interface FacelyticsDemoViewController : UIViewController <FLYDetectionDelegate>
 
-@interface FacelyticsDemoViewController : UIViewController
+
+@property (nonatomic,strong) NSString *currentGender;
+@property (nonatomic,strong) NSString *currentAge;
+@property (nonatomic,strong) NSString *currentEmotion;
+@property (nonatomic,assign) NSInteger maxUsers;
+
+@property (strong) FLYCaptureManager *captureManager;
 
 @end

@@ -31,3 +31,9 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+
+
+#project
+Example/Podfile.lock
+Example/Pods
+Example/Facelytics.xcworkspace
