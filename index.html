@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Facelytics-ios by wassafr</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Facelytics-ios</h1>
+        <p>Facelytics is an SDK allowing mobile and embedded apps to detect face criterias of people located in front of a camera, by analyzing the video feed in realtime.</p>
+
+        <p class="view"><a href="https://github.com/wassafr/Facelytics-ios">View the Project on GitHub <small>wassafr/Facelytics-ios</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/wassafr/Facelytics-ios/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/wassafr/Facelytics-ios/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/wassafr/Facelytics-ios">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="facelytics" class="anchor" href="#facelytics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facelytics</h1>
+
+<p><a href="http://cocoapods.org/pods/Facelytics"><img src="https://img.shields.io/cocoapods/v/Facelytics.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/Facelytics"><img src="https://img.shields.io/cocoapods/l/Facelytics.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/Facelytics"><img src="https://img.shields.io/cocoapods/p/Facelytics.svg?style=flat" alt="Platform"></a></p>
+
+<p>Facelytics is an SDK allowing mobile apps to detect face criterias of people by analyzing the front video feed in realtime. Facelytics is able to track multiple faces and then detect gender, some emotions, age range and accessories, for each detected face. For more <a href="http://face-lytics.com">informations</a>. You can download a sample application on the <a href="https://itunes.apple.com/ai/app/facelytics/id997764123">appstore</a> to see usage exemples for the sdk</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cocoapods</h3>
+
+<p><a href="http://www.cocoapods.org">CocoaPods</a> is the recommended way to add CaptchaFace to your project.</p>
+
+<ol>
+<li>Add a pod entry for Facelytics to your <em>Podfile</em> :</li>
+</ol>
+
+<div class="highlight highlight-ruby"><pre>pod <span class="pl-s"><span class="pl-pds">"</span>Facelytics<span class="pl-pds">"</span></span></pre></div>
+
+<ol>
+<li>Install the pod(s) by running <code>pod install</code>.</li>
+<li>Include Facelytics wherever you need it with <code>#import &lt;Facelytics/Facelytics.h&gt;</code> from Objective-C or <code>import Facelytics</code> from Swift.</li>
+<li>The library embeded in the cocoapods is compiled in debug mode to allow you to attach the debugger while developement. A release version of the library is available in the <strong>Pod/lib</strong> directory of the <a href="https://github.com/wassafr/Facelytics-ios/archive/master.zip">following archive</a> if you want better performances in your release build </li>
+</ol>
+
+<h3>
+<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual installation</h3>
+
+<ol>
+<li>Download the <a href="https://github.com/wassafr/Facelytics-ios/archive/master.zip">latest code version</a> or add the repository as a git submodule to your git-tracked project.</li>
+<li>Drag and drop the <strong>Pod</strong> directory from the archive in your project navigator. Make sure to select <em>Copy items</em> when asked if you extracted the code archive outside of your project.</li>
+<li>Under <code>Pod/lib</code> there is 2 versions of the library, you need to add to your target only the one you need (wether you ar debugging or making a release)</li>
+<li>Download the <a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.11/opencv2.framework.zip/download">opencv library</a> and drag and drop the opencv2.framework in your project navigator.</li>
+<li>Add the opencv dependancies in your project properties in <em>Build Phases</em> &gt; <em>Link with libraries</em> :
+
+<ul>
+<li>libstdc++</li>
+<li>Accelerate</li>
+<li>AssetsLibrary</li>
+<li>AVFoundation</li>
+<li>CoreGraphics</li>
+<li>CoreImage</li>
+<li>CoreMedia</li>
+<li>CoreVideo</li>
+<li>Foundation</li>
+<li>QuartzCore</li>
+<li>ImageIO</li>
+<li>MobileCoreServices</li>
+<li>UIKit</li>
+</ul>
+</li>
+<li>Include Facelytics wherever you need it with <code>#import "Facelytics.h"</code> from Objective-C or <code>import Facelytics</code> from Swift.</li>
+</ol>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first. With <a href="http://www.cocoapods.org">CocoaPods</a> , you can run <code>pod try Facelytics</code>
+from the command line.</p>
+
+<p>Make sure you also see <a href="http://cocoadocs.org/docsets/Faelytics">Facelytics documentation on Cocoadocs</a>.</p>
+
+<p><strong>Attention :</strong> To use the SDK, you need a API key that you can get for free on the <a href="http://face-lytics.com">Facelytics website</a></p>
+
+<p>The sample code is commented and show usage exemples of the SDK.</p>
+
+<h3>
+<a id="basics" class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h3>
+
+<ol>
+<li>
+<p>Add the following import to the top of the file or the bringing header for swift:</p>
+
+<pre><code>#import &lt;Facelytics/Facelytics.h&gt;
+</code></pre>
+
+<p>The main sdk entry point is the FLYCaptureManager object.You have to keep a strong reference on the object while the session is running. You will need a new license request at each FLYCaptureManager creation. It's recomanded to create a new FLYCaptureManager for each session.</p>
+</li>
+<li>
+<p>Optional : If the entire interface is based on Facelytics, you can check if the device can run Facelytics prior to show any Facelytics related UI :</p>
+
+<div class="highlight highlight-objc"><pre>  <span class="pl-k">if</span>([FLYCaptureManager <span class="pl-c1">deviceSupportsFacelytics</span>])
+  {
+      <span class="pl-c">//goto step 3-4</span>
+  }
+  <span class="pl-k">else</span>
+  {
+      <span class="pl-c">//fallback if the device can't use facelytics</span>
+  }</pre></div>
+</li>
+<li>
+<p>Optional : If the entire interface is based on Facelytics, you can check if you are authorised to launch Facelytics prior to show any Facelytics related UI. You need an apikey to lauch the sdk. You can visite  <a href="http://face-lytics.com">Facelytics website</a> to get a free demo key :</p>
+
+<div class="highlight highlight-objc"><pre>
+self.currentManager = [FLYCaptureManager <span class="pl-c1">alloc</span>] init]
+[<span class="pl-v">self</span>.currentManager <span class="pl-c1">requestLicenceAuthorisation:</span><span class="pl-s"><span class="pl-pds">@"</span>&lt;your_key&gt;<span class="pl-pds">"</span></span> <span class="pl-c1">completion:</span>^(<span class="pl-c1">NSError</span> *error) {
+    <span class="pl-k">if</span>(!error)
+    {
+        <span class="pl-c">//show the facelytics related ui</span>
+    }
+    <span class="pl-k">else</span>
+    {
+        <span class="pl-c">//handle the error ( can be no camera, camera access not granted, device not powerfull enough or provided licence invalid</span>
+    }
+}];</pre></div>
+</li>
+<li><p>Optional, you can show a Facelytics related UI (ie. a view with the live video feed and an appropriate drawing). I you want to show a fullscreen preview, simply show a UIViewController which inherits from <code>FLYVideoPreviewViewController</code>. I you want to show a non fullScreen preview, you can attach an instance of <code>FLYVideoPreviewViewController</code>to the capture manager by using the function '- (NSError<em>)attachPreview:(FLYVideoPreviewViewController</em>)preview' (see the sample code for different exemples)</p></li>
+<li>
+<p>You have to start the sdk to begin analyzing faces. You can do it in the 'viewDidAppear' of the related ViewController for exemple
+If you didn't perform step 3 :</p>
+
+<div class="highlight highlight-objc"><pre>[<span class="pl-v">self</span>.currentManager <span class="pl-c1">startCapturewithDefaultCameraAndLicenceKey:</span><span class="pl-s"><span class="pl-pds">@"</span>kuc<span class="pl-pds">"</span></span> <span class="pl-c1">completion:</span>^(<span class="pl-c1">NSError</span> *error) {
+<span class="pl-k">if</span>(error)
+{
+<span class="pl-c">//handle the error ( can be no camera, camera access not granted, device not powerfull enough or provided licence invalid</span>
+
+}
+<span class="pl-k">else</span>
+{
+   <span class="pl-c">//start the face detection. By default only the camera feed is started</span>
+   [<span class="pl-v">self</span>.currentManager <span class="pl-c1">startFaceRecognition</span>];
+
+   <span class="pl-c">//step 6</span>
+}
+   }];</pre></div>
+
+<p>If you already performed step 3 :</p>
+
+<div class="highlight highlight-objc"><pre>[<span class="pl-v">self</span>.currentManager <span class="pl-c1">startCapturewithDefaultCameraCompletion:</span>^(<span class="pl-c1">NSError</span> *error) {
+<span class="pl-k">if</span>(error)
+{
+<span class="pl-c">//handle the error ( can be no camera, camera access not granted, device not powerfull enough or provided licence invalid</span>
+
+}
+<span class="pl-k">else</span>
+{
+   <span class="pl-c">//start the face detection. By default only the camera feed is started</span>
+   [<span class="pl-v">self</span>.currentManager <span class="pl-c1">startFaceRecognition</span>];
+
+   <span class="pl-c">//step 6</span>
+}
+
+}];</pre></div>
+
+<p>Look at the documentation of 'FLYCamera' to allow you to customize camera settings</p>
+</li>
+<li>
+<p>Optional : You can assign a <code>FLYDetectionDelegate</code> to the capture manager to receive face related event and to know when the session is over to hide the related ui :</p>
+
+<div class="highlight highlight-objc"><pre>[<span class="pl-v">self</span>.currentManager <span class="pl-c1">setDetectionDelegate:</span><span class="pl-k">id</span>&lt;FLYDetectionDelegate&gt;];</pre></div>
+
+<p>You should implement the method <code>- (void)detectionDidStopAfterLicenceElapsedTime</code> to know when the session is over and do the appropriate ui staff.</p>
+</li>
+<li><p>When you're done, stop the session by calling the <code>[self.currentManager stopFaceRecognition]</code> method
+`</p></li>
+</ol>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>Xcode 5</li>
+<li>iOS 7</li>
+<li>ARC</li>
+<li>Devices responding to <code>[FLYCaptureManager deviceSupportsFacelytics]</code>, typically iPhones from iphone 4s and iPads from the iPad3</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Facelytics is available under a commercial license. See the LICENSE file for more info.</p>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Wassa, <a href="mailto:contact@wassa.fr">contact@wassa.fr</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/wassafr">wassafr</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
