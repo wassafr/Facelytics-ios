@@ -19,7 +19,7 @@ s.homepage         = "http://face-lytics.com"
    s.screenshots     = "http://a1.mzstatic.com/us/r30/Purple1/v4/f0/91/7b/f0917be0-b832-78a3-e2c3-91e5aa2af982/screen322x572.jpeg", "http://a3.mzstatic.com/us/r30/Purple7/v4/c4/5b/bb/c45bbbc4-efca-de49-033d-c29bd574027d/screen322x572.jpeg"
   s.license          = 'COMMERCIAL'
   s.author           = { "Wassa" => "contact@wassa.fr" }
-  s.source           = { :git => "https://github.com/<wassafr/Facelytics-ios.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/wassafr/Facelytics-ios.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
