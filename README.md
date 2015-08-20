@@ -52,7 +52,7 @@ pod "Facelytics"
 To run the example project, clone the repo, and run `pod install` from the Example directory first. With [CocoaPods](http://www.cocoapods.org) , you can run `pod try Facelytics`
 from the command line.
 
-Make sure you also see [Facelytics documentation on Cocoadocs](http://cocoadocs.org/docsets/Faelytics).
+Make sure you also see [Facelytics documentation on Cocoadocs](http://cocoadocs.org/docsets/Facelytics).
 
 **Attention :** To use the SDK, you need a API key that you can get for free on the [Facelytics website](http://face-lytics.com)
 
