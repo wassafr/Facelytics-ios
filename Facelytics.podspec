@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Facelytics"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
 s.summary          = "Facelytics is an SDK allowing mobile apps to detect face criterias of people by analyzing the front video feed in realtime."
   s.description      = <<-DESC
 Facelytics is able to track multiple faces and then detect gender, some emotions, age range and accessories, for each detected face.

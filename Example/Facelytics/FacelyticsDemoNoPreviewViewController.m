@@ -16,7 +16,7 @@
     self.captureManager = [[FLYCaptureManager alloc] init];
     
     
-    [self.captureManager startCapturewithDefaultCameraAndLicenceKey:@"<your_key>" completion:^(NSError *error) {
+    [self.captureManager startCapturewithDefaultCameraAndLicenceKey:self.licenceKey completion:^(NSError *error) {
         
         if(error)
         {

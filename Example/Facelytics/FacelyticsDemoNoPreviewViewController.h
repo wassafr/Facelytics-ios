@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *genderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emotionLabel;
+
+@property (strong) NSString *licenceKey;
 @end

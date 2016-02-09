@@ -8,9 +8,10 @@
 
 #import "FacelyticsDemoRootTableViewController.h"
 #import "FacelyticsDemoViewController.h"
+#import "FacelyticsDemoNoPreviewViewController.h"
 
 @interface FacelyticsDemoRootTableViewController ()
-
+@property NSString *licenceKey;
 @end
 
 @implementation FacelyticsDemoRootTableViewController
@@ -24,7 +25,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.segueIdentifiers = @[@"showFullScreenVC",@"showThumbnailVC",@"showNoPreviewVC"];
-    
+  
+  
+  #warning replace by the key available on face-lytics.com
+  self.licenceKey = @"<your_key";
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,10 +52,7 @@
         if([FLYCaptureManager deviceSupportsFacelytics])
         {
             // check the licence first to avoid showing a blank ViewController
-#warning replace by the key available on face-lytics.com
-            NSString *licenceKey = @"<your_key>";
-            
-            [self.currentCaptureManager requestLicenceAuthorisation:licenceKey completion:^(NSError *error) {
+            [self.currentCaptureManager requestLicenceAuthorisation:self.licenceKey completion:^(NSError *error) {
                 if(!error)
                 {
                     [self performSegueWithIdentifier:self.segueIdentifiers[indexPath.row] sender:self];
@@ -89,6 +91,12 @@
         //do not retain a local instance of the manager to allow it to be release properly
         self.currentCaptureManager = nil;
     }
+    else
+    {
+      FacelyticsDemoNoPreviewViewController *dest = segue.destinationViewController;
+      dest.licenceKey = self.licenceKey;
+    }
+    
 }
 
 
