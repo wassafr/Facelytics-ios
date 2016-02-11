@@ -8,7 +8,7 @@ Facelytics is an SDK allowing mobile apps to detect face criterias of people by 
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 [CocoaPods](http://www.cocoapods.org) is the recommended way to add CaptchaFace to your project.
 
