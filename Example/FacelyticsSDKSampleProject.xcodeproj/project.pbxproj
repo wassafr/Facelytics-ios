@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCEA5BB12395675B004579DE /* Facelytics_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEA5BB02395675B004579DE /* Facelytics_SDK.framework */; };
+		DCEA5BB22395675B004579DE /* Facelytics_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCEA5BB02395675B004579DE /* Facelytics_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCEDA3E8238FE45B00102D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA3E7238FE45B00102D14 /* AppDelegate.swift */; };
+		DCEDA3EF238FE45B00102D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDA3ED238FE45B00102D14 /* Main.storyboard */; };
+		DCEDA3F4238FE45D00102D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDA3F2238FE45D00102D14 /* LaunchScreen.storyboard */; };
+		DCEDA412238FFE1900102D14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA411238FFE1900102D14 /* HomeViewController.swift */; };
+		DCEDA414238FFF9300102D14 /* PredictionResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA413238FFF9300102D14 /* PredictionResultCollectionViewController.swift */; };
+		DCEDA41623900A1100102D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEDA41523900A1100102D14 /* Assets.xcassets */; };
+		DCEDA41923901B4A00102D14 /* GroupToPredictCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA41823901B4A00102D14 /* GroupToPredictCollectionViewCell.swift */; };
+		DCEDA41B239026BB00102D14 /* PredictionResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA41A239026BB00102D14 /* PredictionResultCollectionViewCell.swift */; };
+		DCEDA41E239030D500102D14 /* FacelyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA41D239030D500102D14 /* FacelyticsService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCEDA3FB238FE45E00102D14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCEDA3DC238FE45B00102D14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCEDA3E3238FE45B00102D14;
+			remoteInfo = FacelyticsSDKSampleProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DCEA5BB32395675B004579DE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DCEA5BB22395675B004579DE /* Facelytics_SDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DCEA5BB02395675B004579DE /* Facelytics_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Facelytics_SDK.framework; path = FacelyticsSDKSampleProject/Facelytics_SDK.framework; sourceTree = "<group>"; };
+		DCEDA3E4238FE45B00102D14 /* FacelyticsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacelyticsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCEDA3E7238FE45B00102D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCEDA3EE238FE45B00102D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCEDA3F3238FE45D00102D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCEDA3F5238FE45D00102D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCEDA3FA238FE45E00102D14 /* FacelyticsSDKSampleProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacelyticsSDKSampleProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCEDA411238FFE1900102D14 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DCEDA413238FFF9300102D14 /* PredictionResultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionResultCollectionViewController.swift; sourceTree = "<group>"; };
+		DCEDA41523900A1100102D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCEDA41823901B4A00102D14 /* GroupToPredictCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupToPredictCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCEDA41A239026BB00102D14 /* PredictionResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCEDA41D239030D500102D14 /* FacelyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacelyticsService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCEDA3E1238FE45B00102D14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCEA5BB12395675B004579DE /* Facelytics_SDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCEDA3F7238FE45E00102D14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCEDA3DB238FE45B00102D14 = {
+			isa = PBXGroup;
+			children = (
+				DCEDA3E6238FE45B00102D14 /* FacelyticsSDKSampleProject */,
+				DCEDA3E5238FE45B00102D14 /* Products */,
+				DCEDA409238FE5E400102D14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DCEDA3E5238FE45B00102D14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCEDA3E4238FE45B00102D14 /* FacelyticsSample.app */,
+				DCEDA3FA238FE45E00102D14 /* FacelyticsSDKSampleProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCEDA3E6238FE45B00102D14 /* FacelyticsSDKSampleProject */ = {
+			isa = PBXGroup;
+			children = (
+				DCEDA3E7238FE45B00102D14 /* AppDelegate.swift */,
+				DCEDA41C239030C300102D14 /* Services */,
+				DCEDA410238FFC7900102D14 /* ViewControllers */,
+				DCEDA41723901B0900102D14 /* Views */,
+				DCEDA3ED238FE45B00102D14 /* Main.storyboard */,
+				DCEDA41523900A1100102D14 /* Assets.xcassets */,
+				DCEDA3F2238FE45D00102D14 /* LaunchScreen.storyboard */,
+				DCEDA3F5238FE45D00102D14 /* Info.plist */,
+			);
+			path = FacelyticsSDKSampleProject;
+			sourceTree = "<group>";
+		};
+		DCEDA409238FE5E400102D14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCEA5BB02395675B004579DE /* Facelytics_SDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCEDA410238FFC7900102D14 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCEDA411238FFE1900102D14 /* HomeViewController.swift */,
+				DCEDA413238FFF9300102D14 /* PredictionResultCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DCEDA41723901B0900102D14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCEDA41823901B4A00102D14 /* GroupToPredictCollectionViewCell.swift */,
+				DCEDA41A239026BB00102D14 /* PredictionResultCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCEDA41C239030C300102D14 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DCEDA41D239030D500102D14 /* FacelyticsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCEDA3E3238FE45B00102D14 /* FacelyticsSDKSampleProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCEDA403238FE45E00102D14 /* Build configuration list for PBXNativeTarget "FacelyticsSDKSampleProject" */;
+			buildPhases = (
+				0308183CAE04262C3E3AD129 /* [CP] Check Pods Manifest.lock */,
+				DCEDA3E0238FE45B00102D14 /* Sources */,
+				DCEDA3E1238FE45B00102D14 /* Frameworks */,
+				DCEDA3E2238FE45B00102D14 /* Resources */,
+				DCEA5BB32395675B004579DE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacelyticsSDKSampleProject;
+			productName = FacelyticsSDKSampleProject;
+			productReference = DCEDA3E4238FE45B00102D14 /* FacelyticsSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCEDA3F9238FE45E00102D14 /* FacelyticsSDKSampleProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCEDA406238FE45E00102D14 /* Build configuration list for PBXNativeTarget "FacelyticsSDKSampleProjectTests" */;
+			buildPhases = (
+				DCEDA3F6238FE45E00102D14 /* Sources */,
+				DCEDA3F7238FE45E00102D14 /* Frameworks */,
+				DCEDA3F8238FE45E00102D14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCEDA3FC238FE45E00102D14 /* PBXTargetDependency */,
+			);
+			name = FacelyticsSDKSampleProjectTests;
+			productName = FacelyticsSDKSampleProjectTests;
+			productReference = DCEDA3FA238FE45E00102D14 /* FacelyticsSDKSampleProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCEDA3DC238FE45B00102D14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Wassa;
+				TargetAttributes = {
+					DCEDA3E3238FE45B00102D14 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					DCEDA3F9238FE45E00102D14 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = DCEDA3E3238FE45B00102D14;
+					};
+				};
+			};
+			buildConfigurationList = DCEDA3DF238FE45B00102D14 /* Build configuration list for PBXProject "FacelyticsSDKSampleProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCEDA3DB238FE45B00102D14;
+			productRefGroup = DCEDA3E5238FE45B00102D14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCEDA3E3238FE45B00102D14 /* FacelyticsSDKSampleProject */,
+				DCEDA3F9238FE45E00102D14 /* FacelyticsSDKSampleProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCEDA3E2238FE45B00102D14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCEDA3F4238FE45D00102D14 /* LaunchScreen.storyboard in Resources */,
+				DCEDA41623900A1100102D14 /* Assets.xcassets in Resources */,
+				DCEDA3EF238FE45B00102D14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCEDA3F8238FE45E00102D14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0308183CAE04262C3E3AD129 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCEDA3E0238FE45B00102D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCEDA41E239030D500102D14 /* FacelyticsService.swift in Sources */,
+				DCEDA41B239026BB00102D14 /* PredictionResultCollectionViewCell.swift in Sources */,
+				DCEDA414238FFF9300102D14 /* PredictionResultCollectionViewController.swift in Sources */,
+				DCEDA3E8238FE45B00102D14 /* AppDelegate.swift in Sources */,
+				DCEDA412238FFE1900102D14 /* HomeViewController.swift in Sources */,
+				DCEDA41923901B4A00102D14 /* GroupToPredictCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCEDA3F6238FE45E00102D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCEDA3FC238FE45E00102D14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCEDA3E3238FE45B00102D14 /* FacelyticsSDKSampleProject */;
+			targetProxy = DCEDA3FB238FE45E00102D14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCEDA3ED238FE45B00102D14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCEDA3EE238FE45B00102D14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCEDA3F2238FE45D00102D14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCEDA3F3238FE45D00102D14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCEDA401238FE45E00102D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DCEDA402238FE45E00102D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCEDA404238FE45E00102D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 64Z6476XJF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacelyticsSDKSampleProject",
+				);
+				INFOPLIST_FILE = FacelyticsSDKSampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.wassa.FacelyticsSDKSampleProject;
+				PRODUCT_NAME = FacelyticsSample;
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCEDA405238FE45E00102D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 64Z6476XJF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacelyticsSDKSampleProject",
+				);
+				INFOPLIST_FILE = FacelyticsSDKSampleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.wassa.FacelyticsSDKSampleProject;
+				PRODUCT_NAME = FacelyticsSample;
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DCEDA407238FE45E00102D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64Z6476XJF;
+				INFOPLIST_FILE = FacelyticsSDKSampleProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.wassa.FacelyticsSDKSampleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacelyticsSample.app/FacelyticsSample";
+			};
+			name = Debug;
+		};
+		DCEDA408238FE45E00102D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64Z6476XJF;
+				INFOPLIST_FILE = FacelyticsSDKSampleProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.wassa.FacelyticsSDKSampleProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacelyticsSample.app/FacelyticsSample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCEDA3DF238FE45B00102D14 /* Build configuration list for PBXProject "FacelyticsSDKSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCEDA401238FE45E00102D14 /* Debug */,
+				DCEDA402238FE45E00102D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCEDA403238FE45E00102D14 /* Build configuration list for PBXNativeTarget "FacelyticsSDKSampleProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCEDA404238FE45E00102D14 /* Debug */,
+				DCEDA405238FE45E00102D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCEDA406238FE45E00102D14 /* Build configuration list for PBXNativeTarget "FacelyticsSDKSampleProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCEDA407238FE45E00102D14 /* Debug */,
+				DCEDA408238FE45E00102D14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCEDA3DC238FE45B00102D14 /* Project object */;
+}
