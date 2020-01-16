@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Facelytics.svg?style=flat)](http://cocoapods.org/pods/Facelytics)
 
 Facelytics is an SDK allowing mobile apps to detect faces and then make gender predictions and age predictions on faces.
-For more [information](http://facelytics.io) about Facelytics.
+For more [information](http://facelytics.io/library/ios) about Facelytics.
 
 ## Installation
 
@@ -31,7 +31,7 @@ pod "Facelytics"
 ## Usage
 
 To run the example project just open it and run. The framework is already included.
-Make sure you also see [Facelytics documentation on Cocoadocs](http://cocoadocs.org/docsets/Facelytics).
+Make sure you also see [Facelytics documentation]().
 **Attention :** To use the SDK, you need a License Key you can on the [Facelytics website](http://facelytics.io)
 
 The sample code is commented and show usage exemples of the SDK.
@@ -91,4 +91,3 @@ Facelytics is available under a commercial license. See the LICENSE file for mor
 ## Author
 
 Wassa, contact@wassa.fr
-
