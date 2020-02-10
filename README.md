@@ -25,7 +25,7 @@ pod "Facelytics"
 
 ### Manual installation
 
-1. Download the [latest code version](https://github.com/wassafr/Facelytics-ios/archive/master.zip) or add the repository as a git submodule to your git-tracked project.
+1. Download the [latest code version](https://github.com/wassafr/Facelytics-ios/raw/master/Facelytics_SDK.zip) or add the repository as a git submodule to your git-tracked project.
 2. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
 
 ## Usage
