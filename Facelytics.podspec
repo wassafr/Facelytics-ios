@@ -8,7 +8,7 @@ Facelytics is able to track multiple faces and then detect gender and age for ea
 DESC
 
   spec.homepage         = "https://facelytics.io"
-  spec.license          = { :type => 'COMMERCIAL', :file => 'Facelytics_SDK.framework/LICENSE.md'}
+  spec.license          = { :type => 'COMMERCIAL', :file => 'LICENSE.md'}
   
   spec.author           = { "Wassa" => "bertrand.villain@wassa.io" }
 
