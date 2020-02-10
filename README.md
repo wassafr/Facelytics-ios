@@ -21,12 +21,17 @@ pod "Facelytics"
 
 2. Install the pod(s) by running `pod install`.
 
-3. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
+3. ⚠️ Check that "Enable Bitcode" is set to "No" in your build settings.
+
+4. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
 
 ### Manual installation
 
 1. Download the [latest code version](https://github.com/wassafr/Facelytics-ios/raw/master/Facelytics_SDK.zip) or add the repository as a git submodule to your git-tracked project.
-2. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
+
+2. ⚠️ Check that "Enable Bitcode" is set to "No" in your build settings.
+
+3. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
 
 ## Usage
 
