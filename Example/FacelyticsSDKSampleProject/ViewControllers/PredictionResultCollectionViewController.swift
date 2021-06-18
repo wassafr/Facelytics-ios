@@ -49,28 +49,20 @@ class PredictionResultCollectionViewController: UIViewController {
    */
   func updatePredictionResult(face: DetectedFace, offset: Int) {
     
-    FacelyticsService.shared.facelyticsInstance?.predictAge(faceToPredict: face.image, completion: { (ageResult, error) in
+    FacelyticsService.shared.facelyticsInstance?.facelyticsPredict(faceToPredict: face.image, completion: { predictionResult, error in
       /// The UI changes must be called from main Thread
       DispatchQueue.main.async {
         if let error = error {
           print("❌ \(error.localizedDescription)")
-        } else if let ageResult = ageResult {
+        } else if let ageResult = predictionResult?.agePredictionResult,
+                  let genderResult = predictionResult?.genderPredictionResult {
           self.dataSource[offset].ageResult = ageResult
-          self.collectionView.reloadItems(at: [IndexPath(item: offset, section: 0)])
-        }
-      }
-    })
-    FacelyticsService.shared.facelyticsInstance?.predictGender(faceToPredict: face.image, completion: { (genderResult, error) in
-      /// The UI changes must be called from main Thread
-      DispatchQueue.main.async {
-        if let error = error {
-          print("❌ \(error.localizedDescription)")
-        } else if let genderResult = genderResult {
           self.dataSource[offset].genderResult = genderResult
           self.collectionView.reloadItems(at: [IndexPath(item: offset, section: 0)])
         }
       }
     })
+    
   }
   
   /**

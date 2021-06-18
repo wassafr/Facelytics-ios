@@ -15,23 +15,19 @@ For more [information](http://facelytics.io/library/ios) about Facelytics.
 
 1. Add a pod entry for Facelytics to your *Podfile* :
 
-```ruby
+```
 pod "Facelytics"
 ```
 
 2. Install the pod(s) by running `pod install`.
 
-3. ⚠️ Check that "Enable Bitcode" is set to "No" in your build settings.
-
-4. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
+3. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
 
 ### Manual installation
 
 1. Download the [latest code version](https://github.com/wassafr/Facelytics-ios/raw/master/Facelytics_SDK.zip) or add the repository as a git submodule to your git-tracked project.
 
-2. ⚠️ Check that "Enable Bitcode" is set to "No" in your build settings.
-
-3. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
+2. Include Facelytics wherever you need it with `#import <Facelytics_SDK/Facelytics_SDK.h>` from Objective-C or `import Facelytics_SDK` from Swift.
 
 ## Usage
 
@@ -75,10 +71,10 @@ The sample code is commented and show usage exemples of the SDK.
  })
  ```
  
- 5. You can now use gender or age prediction
+ 5. You can now use prediction for gender and age
  ```
-FacelyticsService.shared.facelyticsInstance?.predictAge(faceToPredict: face.image, completion: { (ageResult, error) in
-
+ FacelyticsService.shared.facelyticsInstance?.facelyticsPredict(faceToPredict: face.image, completion: { predictionResult, error in
+  
   /// Handle result
 
 })

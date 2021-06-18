@@ -12,6 +12,7 @@ import Facelytics_SDK
 class PredictionResultCollectionViewCell: UICollectionViewCell {
 
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var genderView: UIView!
   @IBOutlet weak var resultLabel: UILabel!
   @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
   
@@ -19,11 +20,13 @@ class PredictionResultCollectionViewCell: UICollectionViewCell {
     let screenBounds = UIScreen.main.bounds
     imageView.image = dataSource.detectedFace.image
     imageHeightConstraint.constant = (screenBounds.width / 3) - 30
+    genderView.layer.cornerRadius = 8
+    genderView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
     if let ageResult = dataSource.ageResult {
-      self.resultLabel.text = "\(ageResult.age)"
+      self.resultLabel.text = "\(Int(round(ageResult.averageAge)))"
     }
     if let genderResult = dataSource.genderResult {
-      self.resultLabel.textColor = genderResult.gender == .male ? #colorLiteral(red: 0.3246597648, green: 0.6645558476, blue: 1, alpha: 1) : #colorLiteral(red: 1, green: 0.2635481954, blue: 1, alpha: 1)
+      self.genderView.backgroundColor = genderResult.gender == .male ? #colorLiteral(red: 0.3246597648, green: 0.6645558476, blue: 1, alpha: 1).withAlphaComponent(0.8) : #colorLiteral(red: 1, green: 0.2635481954, blue: 1, alpha: 1).withAlphaComponent(0.8)
     }
   }
 
