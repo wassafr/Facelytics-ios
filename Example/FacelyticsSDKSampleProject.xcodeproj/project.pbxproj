@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DC921490267A47AC0010B721 /* Facelytics_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC92148E267A47A60010B721 /* Facelytics_SDK.framework */; };
 		DC921491267A47AC0010B721 /* Facelytics_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC92148E267A47A60010B721 /* Facelytics_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCA29BDA2680F6D500E616DB /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA29BD82680F6CC00E616DB /* ZIPFoundation.framework */; };
+		DCA29BDB2680F6D500E616DB /* ZIPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCA29BD82680F6CC00E616DB /* ZIPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCEDA3E8238FE45B00102D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDA3E7238FE45B00102D14 /* AppDelegate.swift */; };
 		DCEDA3EF238FE45B00102D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDA3ED238FE45B00102D14 /* Main.storyboard */; };
 		DCEDA3F4238FE45D00102D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDA3F2238FE45D00102D14 /* LaunchScreen.storyboard */; };
@@ -38,6 +40,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DC921491267A47AC0010B721 /* Facelytics_SDK.framework in Embed Frameworks */,
+				DCA29BDB2680F6D500E616DB /* ZIPFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		DC92148E267A47A60010B721 /* Facelytics_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Facelytics_SDK.framework; path = FacelyticsSDKSampleProject/Facelytics_SDK.framework; sourceTree = "<group>"; };
+		DCA29BD82680F6CC00E616DB /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZIPFoundation.framework; path = FacelyticsSDKSampleProject/ZIPFoundation.framework; sourceTree = "<group>"; };
 		DCEDA3E4238FE45B00102D14 /* FacelyticsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacelyticsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEDA3E7238FE45B00102D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCEDA3EE238FE45B00102D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC921490267A47AC0010B721 /* Facelytics_SDK.framework in Frameworks */,
+				DCA29BDA2680F6D500E616DB /* ZIPFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 		DCEDA409238FE5E400102D14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCA29BD82680F6CC00E616DB /* ZIPFoundation.framework */,
 				DC92148E267A47A60010B721 /* Facelytics_SDK.framework */,
 			);
 			name = Frameworks;

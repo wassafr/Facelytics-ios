@@ -1,4 +1,3 @@
-
 Pod::Spec.new do |spec|
   spec.name             = "Facelytics"
   spec.version          = "2.1.0"
@@ -16,10 +15,10 @@ DESC
   #spec.source           = { :http => 'file:' + __dir__ + '/Facelytics_SDK.zip' }
 
   spec.platform          = :ios, '13.0'
-  #spec.swift_versions    = '5.4'
+  spec.swift_versions    = '5.4'
 
-  spec.ios.vendored_frameworks = ['Facelytics_SDK.framework', 'MobileLicenseSystem.framework' ]
-  spec.frameworks = ['Facelytics_SDK', 'MobileLicenseSystem' ]
+  spec.ios.vendored_frameworks = 'Facelytics_SDK.framework'
+  spec.frameworks = 'Facelytics_SDK'
   spec.dependency 'ZIPFoundation', '~> 0.9.9'
 
 end

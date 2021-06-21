@@ -1,0 +1,86 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name Facelytics_SDK
+import CoreML
+@_exported import Facelytics_SDK
+import Foundation
+import Swift
+import UIKit
+import Vision
+import ZIPFoundation
+public enum FacelyticsError : Swift.Error {
+  case incorrectParameter(parameter: Swift.String, message: Swift.String?)
+  case failToLoadModel
+  case modelNotLoaded
+  case invalidLicense(licenseStatus: Facelytics_SDK.LicenseKeyStatus)
+  case noPredictionResult
+}
+extension FacelyticsError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension UIImage {
+  public func toCVPixelBuffer(type: Darwin.OSType = kCVPixelFormatType_32ARGB, alphaInfo: CoreGraphics.CGImageAlphaInfo = .noneSkipFirst) -> CoreVideo.CVPixelBuffer?
+}
+public struct AgePredictionResult : Swift.CustomDebugStringConvertible {
+  public let averageAge: Swift.Float
+  public let age: Swift.Int
+  public let confidence: Swift.Float
+  public let rawResultArray: [Swift.Float]
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct GenderPredictionResult : Swift.CustomDebugStringConvertible {
+  public let gender: Facelytics_SDK.GenderType
+  public let confidence: Swift.Float
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum GenderType {
+  case male
+  case female
+  public static func == (a: Facelytics_SDK.GenderType, b: Facelytics_SDK.GenderType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct FacelyticsPredictionResult : Swift.CustomDebugStringConvertible {
+  public let agePredictionResult: Facelytics_SDK.AgePredictionResult
+  public let genderPredictionResult: Facelytics_SDK.GenderPredictionResult
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension LicenseKeyStatus : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+}
+public struct DetectedFace : Swift.CustomDebugStringConvertible {
+  public let image: UIKit.UIImage
+  public let trackId: Foundation.UUID
+  public let rect: CoreGraphics.CGRect
+  public func getPixelBuffer() -> CoreVideo.CVPixelBuffer?
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public class Facelytics {
+  public init(licenceKey: Swift.String, completion: ((Swift.Error?) -> Swift.Void)?)
+  public func getLicense() -> Facelytics_SDK.LicenseKeyStatus?
+  public func updateLicense(licenceKey: Swift.String) -> Facelytics_SDK.LicenseKeyStatus?
+  public func loadModels(completion: ((Swift.Error?) -> Swift.Void)?)
+  public func facelyticsPredict(faceToPredict: UIKit.UIImage, completion: @escaping (Facelytics_SDK.FacelyticsPredictionResult?, Swift.Error?) -> Swift.Void)
+  public func facelyticsPredict(faceToPredict: CoreGraphics.CGImage, completion: @escaping (Facelytics_SDK.FacelyticsPredictionResult?, Swift.Error?) -> Swift.Void)
+  public func detectFaces(image: UIKit.UIImage, completion: @escaping ([Facelytics_SDK.DetectedFace]?, Swift.Error?) -> Swift.Void)
+  @objc deinit
+}
+extension Facelytics_SDK.GenderType : Swift.Equatable {}
+extension Facelytics_SDK.GenderType : Swift.Hashable {}

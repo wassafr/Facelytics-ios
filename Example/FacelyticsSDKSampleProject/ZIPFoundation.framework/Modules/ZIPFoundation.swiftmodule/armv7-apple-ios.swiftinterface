@@ -1,0 +1,131 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 effective-4.1.50 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -module-name ZIPFoundation
+import Compression
+import CoreFoundation
+import Foundation
+import Swift
+extension Archive {
+  final public func extract(_ entry: ZIPFoundation.Entry, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> ZIPFoundation.CRC32
+  final public func extract(_ entry: ZIPFoundation.Entry, bufferSize: Swift.UInt32 = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (Foundation.Data) throws -> Swift.Void) throws -> ZIPFoundation.CRC32
+}
+extension Archive {
+  final public func addEntry(with path: Swift.String, relativeTo baseURL: Foundation.URL, compressionMethod: ZIPFoundation.CompressionMethod = .none, bufferSize: Swift.UInt32 = defaultWriteChunkSize, progress: Foundation.Progress? = nil) throws
+  final public func addEntry(with path: Swift.String, type: ZIPFoundation.Entry.EntryType, uncompressedSize: Swift.UInt32, modificationDate: Foundation.Date = Date(), permissions: Swift.UInt16? = nil, compressionMethod: ZIPFoundation.CompressionMethod = .none, bufferSize: Swift.UInt32 = defaultWriteChunkSize, progress: Foundation.Progress? = nil, provider: (Swift.Int, Swift.Int) throws -> Foundation.Data) throws
+  final public func remove(_ entry: ZIPFoundation.Entry, bufferSize: Swift.UInt32 = defaultReadChunkSize, progress: Foundation.Progress? = nil) throws
+}
+public let defaultReadChunkSize: Swift.UInt32
+public let defaultWriteChunkSize: Swift.UInt32
+public let defaultFilePermissions: Swift.UInt16
+public let defaultDirectoryPermissions: Swift.UInt16
+public enum CompressionMethod : Swift.UInt16 {
+  case none
+  case deflate
+  public init?(rawValue: Swift.UInt16)
+  public typealias RawValue = Swift.UInt16
+  public var rawValue: Swift.UInt16 {
+    get
+  }
+}
+final public class Archive : Swift.Sequence {
+  public enum ArchiveError : Swift.Error {
+    case unreadableArchive
+    case unwritableArchive
+    case invalidEntryPath
+    case invalidCompressionMethod
+    case invalidStartOfCentralDirectoryOffset
+    case missingEndOfCentralDirectoryRecord
+    case cancelledOperation
+    public static func == (a: ZIPFoundation.Archive.ArchiveError, b: ZIPFoundation.Archive.ArchiveError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum AccessMode : Swift.UInt {
+    case create
+    case read
+    case update
+    public init?(rawValue: Swift.UInt)
+    public typealias RawValue = Swift.UInt
+    public var rawValue: Swift.UInt {
+      get
+    }
+  }
+  final public let url: Foundation.URL
+  final public let accessMode: ZIPFoundation.Archive.AccessMode
+  public init?(url: Foundation.URL, accessMode mode: ZIPFoundation.Archive.AccessMode, preferredEncoding: Swift.String.Encoding? = nil)
+  @objc deinit
+  final public func makeIterator() -> Swift.AnyIterator<ZIPFoundation.Entry>
+  final public subscript(path: Swift.String) -> ZIPFoundation.Entry? {
+    get
+  }
+  public typealias Element = ZIPFoundation.Entry
+  public typealias Iterator = Swift.AnyIterator<ZIPFoundation.Entry>
+}
+extension Archive {
+  final public func totalUnitCountForRemoving(_ entry: ZIPFoundation.Entry) -> Swift.Int64
+  final public func totalUnitCountForReading(_ entry: ZIPFoundation.Entry) -> Swift.Int64
+  final public func totalUnitCountForAddingItem(at url: Foundation.URL) -> Swift.Int64
+}
+public typealias CRC32 = Swift.UInt32
+public typealias Consumer = (Foundation.Data) throws -> Swift.Void
+public typealias Provider = (Swift.Int, Swift.Int) throws -> Foundation.Data
+public let crcTable: [Swift.UInt32]
+extension Data {
+  public func crc32(checksum: ZIPFoundation.CRC32) -> ZIPFoundation.CRC32
+  public static func compress(size: Swift.Int, bufferSize: Swift.Int, provider: (Swift.Int, Swift.Int) throws -> Foundation.Data, consumer: (Foundation.Data) throws -> Swift.Void) throws -> ZIPFoundation.CRC32
+  public static func decompress(size: Swift.Int, bufferSize: Swift.Int, skipCRC32: Swift.Bool, provider: (Swift.Int, Swift.Int) throws -> Foundation.Data, consumer: (Foundation.Data) throws -> Swift.Void) throws -> ZIPFoundation.CRC32
+}
+extension Data {
+}
+public struct Entry : Swift.Equatable {
+  public enum EntryType : Swift.Int {
+    case file
+    case directory
+    case symlink
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public func path(using encoding: Swift.String.Encoding) -> Swift.String
+  public var path: Swift.String {
+    get
+  }
+  public var fileAttributes: [Foundation.FileAttributeKey : Any] {
+    get
+  }
+  public var checksum: ZIPFoundation.CRC32 {
+    get
+  }
+  public var type: ZIPFoundation.Entry.EntryType {
+    get
+  }
+  public var compressedSize: Swift.Int {
+    get
+  }
+  public var uncompressedSize: Swift.Int {
+    get
+  }
+  public static func == (lhs: ZIPFoundation.Entry, rhs: ZIPFoundation.Entry) -> Swift.Bool
+}
+extension FileManager {
+  public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: ZIPFoundation.CompressionMethod = .none, progress: Foundation.Progress? = nil) throws
+  public func unzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
+}
+extension URL {
+  public func isContained(in parentDirectoryURL: Foundation.URL) -> Swift.Bool
+}
+extension ZIPFoundation.CompressionMethod : Swift.Equatable {}
+extension ZIPFoundation.CompressionMethod : Swift.Hashable {}
+extension ZIPFoundation.CompressionMethod : Swift.RawRepresentable {}
+extension ZIPFoundation.Archive.ArchiveError : Swift.Equatable {}
+extension ZIPFoundation.Archive.ArchiveError : Swift.Hashable {}
+extension ZIPFoundation.Archive.AccessMode : Swift.Equatable {}
+extension ZIPFoundation.Archive.AccessMode : Swift.Hashable {}
+extension ZIPFoundation.Archive.AccessMode : Swift.RawRepresentable {}
+extension ZIPFoundation.Entry.EntryType : Swift.Equatable {}
+extension ZIPFoundation.Entry.EntryType : Swift.Hashable {}
+extension ZIPFoundation.Entry.EntryType : Swift.RawRepresentable {}
