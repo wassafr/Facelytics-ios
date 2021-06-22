@@ -14,11 +14,7 @@
 		</data>
 		<key>Frameworks/ZIPFoundation.framework/ZIPFoundation</key>
 		<data>
-		iTjxNj0CDc544jgZLGibmAc9gsw=
-		</data>
-		<key>Frameworks/ZIPFoundation.framework/_CodeSignature/CodeResources</key>
-		<data>
-		jY+A5uVCJpEfwT82l9yEHoEQ5cI=
+		Db0zlnY3uiZ9AwK80XXEeSZDf50=
 		</data>
 		<key>Headers/Facelytics_SDK-Swift.h</key>
 		<data>
@@ -97,14 +93,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			alDGXWZ8iy1nunpxHr8z/iDIir1Dkwl2G7ZeW6bcNgI=
-			</data>
-		</dict>
-		<key>Frameworks/ZIPFoundation.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6hiZjrktoUbmF/YmW9vKO2l+VBrdiYhaLq3NoVHhBiA=
+			JtF6SiY40c/YekpNvOlaWRBbBI01u5oUpp4ChgZ5dfo=
 			</data>
 		</dict>
 		<key>Headers/Facelytics_SDK-Swift.h</key>

@@ -16,7 +16,9 @@ DESC
 
   spec.platform          = :ios, '13.0'
   spec.swift_versions    = '5.4'
-
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   spec.ios.vendored_frameworks = 'Facelytics_SDK.framework'
   spec.frameworks = 'Facelytics_SDK'
   spec.dependency 'ZIPFoundation', '~> 0.9.9'
